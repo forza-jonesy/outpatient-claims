@@ -7,7 +7,7 @@
 User documentation
 https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
 
-![Ribbon](Documentation/Ribbon.png)
+
 
 ## **Data**
 Datasource 1: Out Patient Claim Sample
