@@ -24,5 +24,7 @@ kept data source in csv and changed yyyymmdd to date in tableau for the CSV i di
 
 
 ## Demo 1
-Column 1 | Column 2 | Database
------------- | ------------- | -------------
+Item | Description | 
+------------ | ------------- | 
+![sampledash](Documentation/sampledash.png) |Here is an example of a dahsboard using the Demo colour palette |
+|||
