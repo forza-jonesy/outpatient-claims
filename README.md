@@ -1,5 +1,5 @@
 
-![Ribbon](Documentation/Ribbon.png)
+![RibbonLarge](Documentation/RibbonLarge.png)
 
 # CLAIM DEMO OUTPATIENT
 
