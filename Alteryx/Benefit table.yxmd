@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="138" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="DESYNPUF_ID" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_BIRTH_DT" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_BIRTH_Yr" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_DEATH_DT" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_SEX_IDENT_CD" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_RACE_CD" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_ESRD_IND" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_STATE_CODE" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_COUNTY_CD" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_HI_CVRAGE_TOT_MONS" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_SMI_CVRAGE_TOT_MONS" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENE_HMO_CVRAGE_TOT_MONS" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="PLAN_CVRG_MOS_NUM" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_ALZHDMTA" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_CHF" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_CHRNKIDN" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_CNCR" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_COPD" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_DEPRESSN" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_DIABETES" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_ISCHMCHT" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_OSTEOPRS" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_RA_OA" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="SP_STRKETIA" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="MEDREIMB_IP" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENRES_IP" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="PPPYMT_IP" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="MEDREIMB_OP" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENRES_OP" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="PPPYMT_OP" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="MEDREIMB_CAR" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="BENRES_CAR" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+            <Field name="PPPYMT_CAR" size="254" source="File: C:\Users\sjone241\Documents\gittest\outpatient-claims\Data\DE1_0_2009_Beneficiary_Summary_File_Sample_20.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="282" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">aka:DOCC_Rep_1|||Beneficiary_Summary</File>
+          <Passwords />
+          <CachedCosmeticName />
+          <FormatSpecificOptions>
+            <TransactionMessages>False</TransactionMessages>
+            <Geometry>True</Geometry>
+            <Projection />
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <OutputOption>Create</OutputOption>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:DOCC_Rep_1
+Query=Beneficiary_Summary</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Benefit table</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e6e3a091-7ccc-4082-9ff9-a540c4f2483a" />
+      <Telemetry>
+        <PreviousWorkflowId value="d7162163-be7c-408b-bb28-a088d7ac12d5" />
+        <OriginWorkflowId value="d7162163-be7c-408b-bb28-a088d7ac12d5" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

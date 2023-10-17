@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="DESYNPUF_ID" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="CLM_ID" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="SEGMENT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="CLM_FROM_DT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="CLM_THRU_DT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="PRVDR_NUM" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="CLM_PMT_AMT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="NCH_PRMRY_PYR_CLM_PD_AMT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="AT_PHYSN_NPI" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="OP_PHYSN_NPI" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="OT_PHYSN_NPI" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="NCH_BENE_BLOOD_DDCTBL_LBLTY_AM" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_1" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_2" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_3" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_4" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_5" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_6" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_7" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_8" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_9" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_DGNS_CD_10" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_PRCDR_CD_1" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_PRCDR_CD_2" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_PRCDR_CD_3" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_PRCDR_CD_4" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_PRCDR_CD_5" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ICD9_PRCDR_CD_6" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="NCH_BENE_PTB_DDCTBL_AMT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="NCH_BENE_PTB_COINSRNC_AMT" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="ADMTNG_ICD9_DGNS_CD" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_1" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_2" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_3" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_4" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_5" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_6" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_7" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_8" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_9" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_10" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_11" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_12" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_13" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_14" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_15" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_16" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_17" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_18" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_19" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_20" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_21" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_22" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_23" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_24" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_25" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_26" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_27" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_28" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_29" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_30" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_31" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_32" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_33" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_34" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_35" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_36" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_37" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_38" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_39" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_40" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_41" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_42" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_43" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_44" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+            <Field name="HCPCS_CD_45" size="254" source="File: C:\Users\sjone241\Documents\git-personal\cms-oon\Data\DE1_0_2008_to_2010_Outpatient_Claims_Sample_20.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="210" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">True</Value>
+          <Value name="List Box (11)">"DESYNPUF_ID","CLM_ID","SEGMENT","CLM_FROM_DT","CLM_THRU_DT","PRVDR_NUM","CLM_PMT_AMT","NCH_PRMRY_PYR_CLM_PD_AMT","AT_PHYSN_NPI","OP_PHYSN_NPI","OT_PHYSN_NPI","NCH_BENE_BLOOD_DDCTBL_LBLTY_AM","ICD9_DGNS_CD_1","ICD9_DGNS_CD_2","ICD9_DGNS_CD_3","ICD9_DGNS_CD_4","ICD9_DGNS_CD_5","ICD9_DGNS_CD_6","ICD9_DGNS_CD_7","ICD9_DGNS_CD_8","ICD9_DGNS_CD_9","ICD9_DGNS_CD_10","ICD9_PRCDR_CD_1","ICD9_PRCDR_CD_2","ICD9_PRCDR_CD_3","ICD9_PRCDR_CD_4","ICD9_PRCDR_CD_5","ICD9_PRCDR_CD_6","NCH_BENE_PTB_DDCTBL_AMT","NCH_BENE_PTB_COINSRNC_AMT","ADMTNG_ICD9_DGNS_CD","HCPCS_CD_1","HCPCS_CD_2","HCPCS_CD_3","HCPCS_CD_4","HCPCS_CD_5","HCPCS_CD_6","HCPCS_CD_7","HCPCS_CD_8","HCPCS_CD_9","HCPCS_CD_10","HCPCS_CD_11","HCPCS_CD_12","HCPCS_CD_13","HCPCS_CD_14","HCPCS_CD_15","HCPCS_CD_16","HCPCS_CD_17","HCPCS_CD_18","HCPCS_CD_19","HCPCS_CD_20","HCPCS_CD_21","HCPCS_CD_22","HCPCS_CD_23","HCPCS_CD_24","HCPCS_CD_25","HCPCS_CD_26","HCPCS_CD_27","HCPCS_CD_28","HCPCS_CD_29","HCPCS_CD_30","HCPCS_CD_31","HCPCS_CD_32","HCPCS_CD_33","HCPCS_CD_34","HCPCS_CD_35","HCPCS_CD_36","HCPCS_CD_37","HCPCS_CD_38","HCPCS_CD_39","HCPCS_CD_40","HCPCS_CD_41","HCPCS_CD_42","HCPCS_CD_43","HCPCS_CD_44","HCPCS_CD_45"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="DESYNPUF_ID" selected="True" />
+            <SelectField field="CLM_ID" selected="True" />
+            <SelectField field="SEGMENT" selected="True" />
+            <SelectField field="CLM_FROM_DT" selected="True" />
+            <SelectField field="CLM_THRU_DT" selected="True" />
+            <SelectField field="PRVDR_NUM" selected="True" />
+            <SelectField field="CLM_PMT_AMT" selected="True" type="Double" size="8" />
+            <SelectField field="NCH_PRMRY_PYR_CLM_PD_AMT" selected="True" type="Double" size="8" />
+            <SelectField field="AT_PHYSN_NPI" selected="True" />
+            <SelectField field="OP_PHYSN_NPI" selected="True" />
+            <SelectField field="OT_PHYSN_NPI" selected="True" />
+            <SelectField field="NCH_BENE_BLOOD_DDCTBL_LBLTY_AM" selected="True" type="Double" size="8" />
+            <SelectField field="NCH_BENE_PTB_DDCTBL_AMT" selected="True" type="Double" size="8" />
+            <SelectField field="NCH_BENE_PTB_COINSRNC_AMT" selected="True" type="Double" size="8" />
+            <SelectField field="ICD9_DGNS_CD_1" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_2" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_3" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_4" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_5" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_6" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_7" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_8" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_9" selected="True" />
+            <SelectField field="ICD9_DGNS_CD_10" selected="True" />
+            <SelectField field="ICD9_PRCDR_CD_1" selected="True" />
+            <SelectField field="ICD9_PRCDR_CD_2" selected="True" />
+            <SelectField field="ICD9_PRCDR_CD_3" selected="True" />
+            <SelectField field="ICD9_PRCDR_CD_4" selected="True" />
+            <SelectField field="ICD9_PRCDR_CD_5" selected="True" />
+            <SelectField field="ICD9_PRCDR_CD_6" selected="True" />
+            <SelectField field="ADMTNG_ICD9_DGNS_CD" selected="True" />
+            <SelectField field="HCPCS_CD_1" selected="True" />
+            <SelectField field="HCPCS_CD_2" selected="True" />
+            <SelectField field="HCPCS_CD_3" selected="True" />
+            <SelectField field="HCPCS_CD_4" selected="True" />
+            <SelectField field="HCPCS_CD_5" selected="True" />
+            <SelectField field="HCPCS_CD_6" selected="True" />
+            <SelectField field="HCPCS_CD_7" selected="True" />
+            <SelectField field="HCPCS_CD_8" selected="True" />
+            <SelectField field="HCPCS_CD_9" selected="True" />
+            <SelectField field="HCPCS_CD_10" selected="True" />
+            <SelectField field="HCPCS_CD_11" selected="True" />
+            <SelectField field="HCPCS_CD_12" selected="True" />
+            <SelectField field="HCPCS_CD_13" selected="True" />
+            <SelectField field="HCPCS_CD_14" selected="True" />
+            <SelectField field="HCPCS_CD_15" selected="True" />
+            <SelectField field="HCPCS_CD_16" selected="True" />
+            <SelectField field="HCPCS_CD_17" selected="True" />
+            <SelectField field="HCPCS_CD_18" selected="True" />
+            <SelectField field="HCPCS_CD_19" selected="True" />
+            <SelectField field="HCPCS_CD_20" selected="True" />
+            <SelectField field="HCPCS_CD_21" selected="True" />
+            <SelectField field="HCPCS_CD_22" selected="True" />
+            <SelectField field="HCPCS_CD_23" selected="True" />
+            <SelectField field="HCPCS_CD_24" selected="True" />
+            <SelectField field="HCPCS_CD_25" selected="True" />
+            <SelectField field="HCPCS_CD_26" selected="True" />
+            <SelectField field="HCPCS_CD_27" selected="True" />
+            <SelectField field="HCPCS_CD_28" selected="True" />
+            <SelectField field="HCPCS_CD_29" selected="True" />
+            <SelectField field="HCPCS_CD_30" selected="True" />
+            <SelectField field="HCPCS_CD_31" selected="True" />
+            <SelectField field="HCPCS_CD_32" selected="True" />
+            <SelectField field="HCPCS_CD_33" selected="True" />
+            <SelectField field="HCPCS_CD_34" selected="True" />
+            <SelectField field="HCPCS_CD_35" selected="True" />
+            <SelectField field="HCPCS_CD_36" selected="True" />
+            <SelectField field="HCPCS_CD_37" selected="True" />
+            <SelectField field="HCPCS_CD_38" selected="True" />
+            <SelectField field="HCPCS_CD_39" selected="True" />
+            <SelectField field="HCPCS_CD_40" selected="True" />
+            <SelectField field="HCPCS_CD_41" selected="True" />
+            <SelectField field="HCPCS_CD_42" selected="True" />
+            <SelectField field="HCPCS_CD_43" selected="True" />
+            <SelectField field="HCPCS_CD_44" selected="True" />
+            <SelectField field="HCPCS_CD_45" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="474" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">aka:DOCC_Rep_1|||Outpatient_Claim_Sample</File>
+          <Passwords />
+          <CachedCosmeticName />
+          <FormatSpecificOptions>
+            <TransactionMessages>False</TransactionMessages>
+            <Geometry>True</Geometry>
+            <Projection />
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <OutputOption>Create</OutputOption>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:DOCC_Rep_1
+Query=Outpatient_Claim_Sample</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output26" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Outpatient Claims Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="37457072-44ca-4868-9d02-666fd65b3cea" />
+      <Telemetry>
+        <PreviousWorkflowId value="b932a145-ac01-416f-b20f-eba32134035f" />
+        <OriginWorkflowId value="b932a145-ac01-416f-b20f-eba32134035f" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
