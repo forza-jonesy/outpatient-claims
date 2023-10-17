@@ -8,13 +8,23 @@
 -- DATE: 20231009
 --==============================================================================================================================================
 
+--1 General investigating tables
+--2 Writing table to get oc joint to bc
+--3 Create Reporting table to get countdmembers and claims
+--4 Unpivoting benefit table to get one disease 
+--5
+
+
+
+--==============================================================================================================================================
+-- 1 General investigating tables
+--==============================================================================================================================================
 
 
 SELECT DESYNPUF_ID, CLM_ID, SEGMENT
 , CLM_FROM_DT, CAST( CAST( CLM_FROM_DT AS char(8)) AS date ) as CLM_FROM_DT_1
 , CLM_THRU_DT, CAST( CAST( CLM_THRU_DT AS char(8)) AS date ) as CLM_THRU_DT_1
 , PRVDR_NUM, CLM_PMT_AMT, NCH_PRMRY_PYR_CLM_PD_AMT, AT_PHYSN_NPI
-
 , OP_PHYSN_NPI, OT_PHYSN_NPI, NCH_BENE_BLOOD_DDCTBL_LBLTY_AM, NCH_BENE_PTB_DDCTBL_AMT, NCH_BENE_PTB_COINSRNC_AMT, 
 ICD9_DGNS_CD_1, ICD9_DGNS_CD_2, ICD9_DGNS_CD_3, ICD9_DGNS_CD_4, ICD9_DGNS_CD_5, ICD9_DGNS_CD_6, ICD9_DGNS_CD_7, ICD9_DGNS_CD_8, ICD9_DGNS_CD_9, ICD9_DGNS_CD_10, ICD9_PRCDR_CD_1, 
 ICD9_PRCDR_CD_2, ICD9_PRCDR_CD_3, ICD9_PRCDR_CD_4, ICD9_PRCDR_CD_5, ICD9_PRCDR_CD_6, ADMTNG_ICD9_DGNS_CD, HCPCS_CD_1, HCPCS_CD_2, HCPCS_CD_3, HCPCS_CD_4, HCPCS_CD_5, HCPCS_CD_6,
@@ -24,20 +34,14 @@ HCPCS_CD_35, HCPCS_CD_36, HCPCS_CD_37, HCPCS_CD_38, HCPCS_CD_39, HCPCS_CD_40, HC
 FROM FWAE_aPP.dbo.Outpatient_Claim_Sample;
 
 
---==============================================================================================================================================
--- Used for Question 5. provider & chronic illness, calculate the cost per member. (use AT_PHYSN_NPI) 
---==============================================================================================================================================
-
-
 SELECT DESYNPUF_ID, CLM_ID, SEGMENT
 , CLM_FROM_DT, CAST( CAST( CLM_FROM_DT AS char(8)) AS date ) as CLM_FROM_DT_1
 , CLM_THRU_DT, CAST( CAST( CLM_THRU_DT AS char(8)) AS date ) as CLM_THRU_DT_1
 , PRVDR_NUM, CLM_PMT_AMT, NCH_PRMRY_PYR_CLM_PD_AMT, AT_PHYSN_NPI
 FROM FWAE_aPP.dbo.Outpatient_Claim_Sample where AT_PHYSN_NPI =''
 
-
 --==============================================================================================================================================
---General investigation
+
 select count(*) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1; -- 790,044
 
 select count(distinct CLM_ID ) FROM FWAE_aPP.dbo.Outpatient_Claim_Sampl_1e; -- 779256
@@ -64,7 +68,7 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 
 	
 --==============================================================================================================================================
--- writing table to get oc joint to bc with combined diseases and where NPI is not blank as its needed for analysis
+-- 2 writing table to get oc joint to bc with combined diseases and where NPI is not blank as its needed for analysis
 --==============================================================================================================================================	
 	--select count(*) from (
 	SELECT 
@@ -80,7 +84,7 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 		--787,509 rows 
 
 --==============================================================================================================================================	
--- Create Reporting table to get countdmembers and claims
+-- 3 Create Reporting table to get countdmembers and claims
 -- getting cost per member per disease combination for each NPI
 --==============================================================================================================================================	
 
@@ -123,15 +127,9 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 	   select * from FWAE_aPP.dbo.Outpatient_BS_Reporting where AT_PHYSN_NPI in ('2150853459','2861567951', '5578748707', '1308731628')
 	   select sum(npi_disease_Amt) from FWAE_aPP.dbo.Outpatient_BS_Reporting; --$206332790 - same as tableau total 
 
-
-
-
-
-
-SELECT DESYNPUF_ID, AT_PHYSN_NPI, sum(CLM_PMT_AMT)
-FROM FWAE_aPP.dbo.Outpatient_Claim_Sample
-
-group by DESYNPUF_ID, AT_PHYSN_NPI) a
+--==============================================================================================================================================
+-- 4 Unpivoting benefit table to get one disease at once and showing members multiple times for multiple diseases
+-- put diseases in columns and members for a complete list of all the diseases and members
 
 --Need to pivot NPI and disease joined by member. Joined claim table on left with member table. Pivoted in tableau as another data source. This gives a filter for providers that treat a given disease with member count and paid amt
 SELECT DESYNPUF_ID, SP_ALZHDMTA, SP_CHF, SP_CHRNKIDN, SP_CNCR, SP_COPD, SP_DEPRESSN, SP_DIABETES, SP_ISCHMCHT, SP_OSTEOPRS, SP_RA_OA, SP_STRKETIA
@@ -139,9 +137,6 @@ SELECT DESYNPUF_ID, SP_ALZHDMTA, SP_CHF, SP_CHRNKIDN, SP_CNCR, SP_COPD, SP_DEPRE
 , MEDREIMB_IP, BENRES_IP, PPPYMT_IP, MEDREIMB_OP, BENRES_OP, PPPYMT_OP, MEDREIMB_CAR, BENRES_CAR, PPPYMT_CAR
 FROM FWAE_aPP.dbo.Beneficiary_Summary;
 
-
---==============================================================================================================================================
--- unpivoting Ben table to put diseases in columns and members for a complete list of all the diseases and members
 --==============================================================================================================================================
 
 	select DESYNPUF_ID, Disease_Flag, Disease
