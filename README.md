@@ -44,5 +44,5 @@ Locations of datasources at Documentation/Technical Skills Interview Task.xlsx
 Item | Description | 
 ------------ | ------------- | 
 ![sampledash](Documentation/sampledash.png) |Here is an example of a dashboard using the Demo colour palette |
-|![tableaudash](Documentation/tableaudash.png)|Tableau public dashbord example of multiple chronic diseases with fonts and colour palette and parameter to change date breakdown|
-|![tableaudash1](Documentation/tableaudash.gif)|Info button and functionality|
+![tableaudash](Documentation/tableaudash.png)|Tableau public dashbord example of multiple chronic diseases with fonts and colour palette and parameter to change date breakdown|
+![tableaudash1](Documentation/tableaudash1.gif)|Info button and functionality|
