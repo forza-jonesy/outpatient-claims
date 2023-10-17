@@ -4,7 +4,9 @@
 # OUTPATIENT CLAIMS BENEFICIARIES CMS PUBLIC DATA
 
 ### **Introduction**
-User documentation
+Demo data analysis and Tableau Dashboard for CMS public data.
+Using SQL, Alteryx, Tableau, CSS. <br/>
+CMS Data Manual
 https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
 
 
@@ -25,7 +27,6 @@ Locations of datasources at Documentation/Technical Skills Interview Task.xlsx
 
 ### **2. Beneficiary Summary**
 * Kept data source in csv and changed yyyymmdd to date in tableau for the CSV i didnt ingest into a DB
-* 
 * recoded 1 yes to 1 and 2 no to 0
 * Joined to OPC
 * Created unpivot of Benefit table to get list of members and their diseases whether or not they had more than 1 for question 5. put in MS SQL
@@ -38,7 +39,12 @@ Locations of datasources at Documentation/Technical Skills Interview Task.xlsx
 * added palette to My Tableau Repository, and shapes with palette
 * assumed race codes w/o reading the manual in too much detail
 
+### **4. Alteryx**
+* Simple ingestion of 2 csv files into mssql server database
 
+### **5. Documentation**
+* Contains ppt document with notes
+* Contains all images and gifs used 
 
 ## Examples
 Item | Description | 
