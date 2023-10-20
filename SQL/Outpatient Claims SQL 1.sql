@@ -108,7 +108,10 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 		where AT_PHYSN_NPI in ( '2861567951', '5578748707', '1308731628')
 		--order by AT_PHYSN_NPI, Combine 
 		)
-	, cte_2 as (
+	
+		select count(distinct DESYNPUF_ID), Combin FROM cte_1 group by Combin
+		
+		, cte_2 as (
 		select DESYNPUF_ID, AT_PHYSN_NPI, Combin
 			, sum(Claim_Count) as Claim_Count
 			, count(*) over (partition by AT_PHYSN_NPI, Combin) as CountDMembers_NPI_Disease
@@ -132,7 +135,7 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 		, avg(Combin_Total_Amt) as Combin_Total_Amt
 	    , round(avg(NPI_Disease_Amt) /  avg(CountDMembers_NPI_Disease),0) as Cost_PM_NPI_Disease_Combin		-- Amt divided by member count
  		, round(avg(Combin_Total_Amt) /  avg(CountDMembers_Combin),0) as Cost_PM_Combin						-- Amt divided by member count
-	 --  INTO FWAE_aPP.dbo.Outpatient_BS_Reporting
+	   INTO FWAE_aPP.dbo.Outpatient_BS_Reporting
 	   FROM cte_2 group by AT_PHYSN_NPI, Combin
 	   
 	    -- 544647 rows of unique npi, disease combo
@@ -176,12 +179,14 @@ FROM FWAE_aPP.dbo.Beneficiary_Summary;
 --==============================================================================================================================================
 
 
+--==============================================================================================================================================
+-- Table checking
+		
+	select * from FWAE_aPP.dbo.Outpatient_BS_Reporting
+	where AT_PHYSN_NPI in ('5578748707', '2602616992','7684092608','1308731628')
 
 
 
-
-
-
-
-
-
+	
+	
+	
