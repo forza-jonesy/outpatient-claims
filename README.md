@@ -22,8 +22,8 @@ Locations of datasources at Documentation/Technical Skills Interview Task.xlsx
 ### **1. Outpatient Claims**
  * Ingested using alteryx, visually inspected column names and data missingness. Removed cols that are completely null, white spaces. 
  * Removed blank providersChanged yyyymmdd to date in sql for the one OPC i ingested into MSSQL Server. 
- * Used CTEs and partitions to find countd member per provider/disease combination (PPDC), sum paid amt PPDC, sum paid amt for amt for a provider.
- * Inner joined to Benefit summary to get disease combination concatenated along with race, age etc. 3 dupes ignored
+ * Used CTEs and partitions to find countd member per provider/disease combination (PPDC), sum paid amt PPDC, sum paid amt for amt for a provider this can be used to speed up tableau workbook where aggregation is not needed. eg boxplot.
+ * Inner joined to Benefit summary to get disease combination concatenated along with race, age etc. 3 dupes only so there is no multiplication of data. ignored the 3 dupes.
 
 ### **2. Beneficiary Summary**
 * Kept data source in csv and changed yyyymmdd to date in tableau for the CSV i didnt ingest into a DB
@@ -52,3 +52,12 @@ Item | Description |
 ![sampledash](Documentation/sampledash.png)|Here is an example of a dashboard using the Demo colour palette|
 ![tableaudash](Documentation/tableaudash.PNG)|Tableau public dashbord example of multiple chronic diseases with fonts and colour palette and parameter to change date breakdown|
 ![tableaudash1](Documentation/tableaudash1.gif)|Info button and functionality|
+
+
+### **6. More Analysis**
+
+* Correlation matrix for disease combinations
+* Add variance from avg NPI + Disease Combination to single NPI cost PM
+* Investigate blank data better
+* Investigate gender, state, age wrt cost PM
+* Are providers skewed to certain demographics? appy a weighting factor to avg cost per NPI (Q8), similar to what stors do for skewed plans.

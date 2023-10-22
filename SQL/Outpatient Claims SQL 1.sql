@@ -49,11 +49,10 @@ select count(distinct CLM_ID ) FROM FWAE_aPP.dbo.Outpatient_Claim_Sampl_1e; -- 7
 select count(distinct DESYNPUF_ID ) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1; -- 85k
 select count(distinct PRVDR_NUM ) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1; -- 6370
 select sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample; -- 223.265M
-
 select count(*) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample where ICD9_DGNS_CD_1 =''; --5514
-select * FROM FWAE_aPP.dbo.Outpatient_Claim_Sample where ICD9_DGNS_CD_1 =''; --5514
+select * FROM FWAE_aPP.dbo.Outpatient_Claim_Sample where AT_PHYSN_NPI = '5578748707';
 select count(*) FROM FWAE_aPP.dbo.Beneficiary_Summary; --114,461
-select * FROM FWAE_aPP.dbo.Beneficiary_Summary; --11,461
+select * FROM FWAE_aPP.dbo.Beneficiary_Summary where DESYNPUF_ID = '2C8BD3BDE0E89AC3';
 select count(distinct DESYNPUF_ID ) FROM FWAE_aPP.dbo.Beneficiary_Summary; -- 114639, no dupes
 
 select DESYNPUF_ID, SP_ALZHDMTA, SP_CHF, SP_CHRNKIDN, SP_CNCR, SP_COPD, SP_DEPRESSN, SP_DIABETES, SP_ISCHMCHT, SP_OSTEOPRS, SP_RA_OA, SP_STRKETIA
@@ -105,11 +104,11 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 			, Sum(CLM_PMT_AMT) over (partition by AT_PHYSN_NPI) as NPI_Total_Amt
 			, Sum(CLM_PMT_AMT) over (partition by Combine) as Combin_Total_Amt
 		FROM FWAE_aPP.dbo.Outpatient_C_BS_Join 
-		where AT_PHYSN_NPI in ( '2861567951', '5578748707', '1308731628')
+		--where AT_PHYSN_NPI in  ('5578748707', '2602616992','7684092608','1308731628')
 		--order by AT_PHYSN_NPI, Combine 
 		)
 	
-		select count(distinct DESYNPUF_ID), Combin FROM cte_1 group by Combin
+	--	select count(distinct DESYNPUF_ID), Combin FROM cte_1 group by Combin
 		
 		, cte_2 as (
 		select DESYNPUF_ID, AT_PHYSN_NPI, Combin
@@ -123,24 +122,34 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 		FROM cte_1 group by DESYNPUF_ID, AT_PHYSN_NPI, Combin
 		--group by AT_PHYSN_NPI, Combine
 			)
-	select 
+	, cte_3 as (
+		select 
 		AT_PHYSN_NPI
 		, Combin
+		, avg(NPI_Disease_Count) as NPI_Disease_Count
 		, sum(Claim_Count) as Claim_Count
 		, avg(CountDMembers_NPI_Disease) as CountDMembers_NPI_Disease
 		, avg(CountDMembers_Combin) as CountDMembers_Combin
-		, avg(NPI_Disease_Count) as NPI_Disease_Count
-		, avg(NPI_Total_Amt) as NPI_Total_Amt 
-		, avg(NPI_Disease_Amt) as NPI_Disease_Amt															-- Amt for a disease all of one NPI combination. also sum this in Tableau to get total Amt
 		, avg(Combin_Total_Amt) as Combin_Total_Amt
-	    , round(avg(NPI_Disease_Amt) /  avg(CountDMembers_NPI_Disease),0) as Cost_PM_NPI_Disease_Combin		-- Amt divided by member count
- 		, round(avg(Combin_Total_Amt) /  avg(CountDMembers_Combin),0) as Cost_PM_Combin						-- Amt divided by member count
-	   INTO FWAE_aPP.dbo.Outpatient_BS_Reporting
+		, avg(NPI_Total_Amt) as NPI_Total_Amt 
+		, avg(NPI_Disease_Amt) as NPI_Comb_Amt
+		, round(avg(Combin_Total_Amt) /  avg(CountDMembers_Combin),0) as Cost_PM_Comb					-- Amt divided by member count-- Amt for a disease all of one NPI combination. also sum this in Tableau to get total Amt
+		, round(avg(NPI_Disease_Amt) /  avg(CountDMembers_NPI_Disease),0) as Cost_PM_NPI_Comb			-- Amt divided by member count
+
 	   FROM cte_2 group by AT_PHYSN_NPI, Combin
+		)
+	   select *
+	   , round(avg(Cost_PM_NPI_Comb) over (partition by AT_PHYSN_NPI),0) as Avg_Cost_Per_NPI
+	  from cte_3
+	   where AT_PHYSN_NPI in  ('5578748707', '2602616992','7684092608','2371805120')
+	   order by AT_PHYSN_NPI desc, Combin asc
 	   
+	   INTO FWAE_aPP.dbo.Outpatient_BS_Reporting
 	    -- 544647 rows of unique npi, disease combo
 		
-	   
+	  -- 2371805120 expensive
+	  -- 0513903103 cheap
+	  -- 7625887006 zero
 	   
 		-- select * from FWAE_aPP.dbo.Outpatient_BS_Reporting where AT_PHYSN_NPI in ('2150853459','2861567951', '5578748707', '1308731628')
 		-- select sum(npi_disease_Amt) from FWAE_aPP.dbo.Outpatient_BS_Reporting; --$206332790 - same as tableau total 
@@ -153,7 +162,7 @@ select count(*), sum(CLM_PMT_AMT) FROM FWAE_aPP.dbo.Outpatient_Claim_Sample_1 oc
 		, round(avg(Cost_PM_NPI_Disease_Combin) over (partition by AT_PHYSN_NPI),0) as Avg_NPI_Disease_Cost_PM 
 		-- this is the avg cost for a provider to treat a disease per member used for question 8. an avg of an avg.
 		from FWAE_aPP.dbo.Outpatient_BS_Reporting 
-		where AT_PHYSN_NPI in ('2150853459','2861567951', '5578748707', '1308731628')
+		where AT_PHYSN_NPI in ('5578748707', '2602616992','7684092608','1308731628')
 		
 --==============================================================================================================================================
 -- 5 Unpivoting benefit table to get one disease at once and showing members multiple times for multiple diseases
